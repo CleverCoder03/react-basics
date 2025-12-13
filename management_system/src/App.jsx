@@ -1,12 +1,13 @@
 import './App.css'
+import { Button } from "../components/ui/button"
 
 function App() {
 
   return (
     <>
-      <div>
-        
-      </div>
+      <div className="flex justify-center items-center h-dvh">
+      <Button variant="outline">Senpai</Button>
+    </div>
     </>
   )
 }
