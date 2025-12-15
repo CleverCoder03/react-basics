@@ -22,35 +22,42 @@ const QueueDisplay = ({
   setQueue,
 }) => {
   return (
-    <div className="w-200 h-full">
+    <div className="md:w-200 h-full">
       <Card className="border-0">
         <CardHeader>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
             <CardTitle>Bank Task Manager</CardTitle>
             <CardAction>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="default" className="cursor-pointer">
-                    Add New Task
-                  </Button>
-                </SheetTrigger>
-                <QueueForm onAdd={onAdd} />
-              </Sheet>
-              <Button
-                variant="destructive"
-                className="ml-4"
-                onClick={() => {
-                  localStorage.removeItem(STORAGE_KEY);
-                  setQueue([]);
-                }}
-              >
-                Clear All
-              </Button>
+              <div className="flex items-center justify-center w-dvw md:w-full">
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button
+                      variant="default"
+                      size="sm"
+                      className="cursor-pointer"
+                    >
+                      Add New Task
+                    </Button>
+                  </SheetTrigger>
+                  <QueueForm onAdd={onAdd} />
+                </Sheet>
+                <Button
+                  variant="destructive"
+                  className="ml-2 md:ml-4"
+                  size="sm"
+                  onClick={() => {
+                    localStorage.removeItem(STORAGE_KEY);
+                    setQueue([]);
+                  }}
+                >
+                  Clear All
+                </Button>
+              </div>
             </CardAction>
           </div>
         </CardHeader>
         <div className="px-5">
-          <ScrollArea className="h-120 w-full rounded-md border py-4">
+          <ScrollArea className="h-120 w-dvw md:w-full rounded-md border py-4">
             <CardContent className="flex flex-col gap-5 px-2">
               <QueueCard
                 queue={queue}

@@ -36,8 +36,8 @@ function App() {
       <div className="fixed top-0 right-0 p-5">
         <ModeToggle />
       </div>
-      <div className="flex flex-col pt-[20vh] items-center h-dvh">
-        <h1 className="text-3xl font-semibold">Queue Management System</h1>
+      <div className="flex flex-col pt-30 md:pt-[20vh] items-center h-dvh">
+        <h1 className="text-2xl md:text-3xl font-semibold">Queue Management System</h1>
         <div>
           {/* Display */}
           <div className="mt-10">
