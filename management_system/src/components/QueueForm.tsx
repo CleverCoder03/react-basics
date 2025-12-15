@@ -28,6 +28,13 @@ import {
   SelectValue,
 } from "../../components/ui/select";
 
+type QueueFormValues = z.infer<typeof formSchema>;
+
+type QueueFormProps = {
+  onAdd: (data: QueueFormValues) => void;
+};
+
+
 const formSchema = z.object({
   username: z
     .string()
@@ -44,7 +51,7 @@ const formSchema = z.object({
   priority: z.string().min(1, "Please select a priority"),
 });
 
-const QueueForm = ({onAdd}) => {
+const QueueForm = ({ onAdd }: QueueFormProps) => {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
