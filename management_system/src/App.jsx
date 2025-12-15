@@ -12,10 +12,6 @@ function App() {
       <div className="flex flex-col pt-[20vh] items-center h-dvh">
         <h1 className="text-3xl font-semibold">Queue Management System</h1>
         <div>
-          {/* FORM */}
-          <div>
-
-          </div>
           {/* Display */}
           <div className="mt-10">
             <QueueDisplay />
