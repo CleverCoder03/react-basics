@@ -2,6 +2,9 @@ import "./App.css";
 import { ModeToggle } from "../components/mode-toggle";
 import QueueDisplay from "./components/QueueDisplay";
 import { useEffect, useState } from "react";
+import { Credit } from "./components/Credit";
+import { Button } from "../components/ui/button";
+import { GithubIcon } from "lucide-react";
 
 function App() {
   const STORAGE_KEY = "SENPAI";
@@ -33,7 +36,10 @@ function App() {
   };
   return (
     <>
-      <div className="fixed top-0 right-0 p-5">
+      <div className="fixed top-0 right-0 p-5 flex gap-4">
+        <a href="https://github.com/CleverCoder03/react-basics/tree/main/management_system" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <Button><GithubIcon /></Button>
+        </a>
         <ModeToggle />
       </div>
       <div className="flex flex-col pt-30 md:pt-[20vh] items-center h-dvh">
@@ -51,6 +57,9 @@ function App() {
             />
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center">
+        <Credit />
       </div>
     </>
   );
