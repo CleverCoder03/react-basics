@@ -6,7 +6,7 @@ import RefProps from "./components/RefProps";
 import ThemeToggler from "./components/ThemeToggler";
 
 function Navigation() {
-  const isDark = true;
+  // const isDark = true;
 
   const sections = [
     { id: "basic", label: "Basic Props", icon: "📦" },
