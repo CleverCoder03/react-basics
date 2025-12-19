@@ -1,11 +1,11 @@
 import CartItem from "./CartItem"
 
 const Cart = ({cart, onUpdateQuantity, onRemove, total}) => {
-  // if (cart.length === 0) {
-  //   return <div>
-  //     <h1>Your cart is empty loser!!</h1>
-  //   </div>
-  // }
+  if (cart.length === 0) {
+    return <div>
+      <h1>Your cart is empty loser!!</h1>
+    </div>
+  }
 
   return (
     <div className="flex items-center flex-col">
