@@ -3,6 +3,7 @@ import "./App.css";
 
 function App() {
   const {count, increase, decrease, reset} = useCounterStore()
+
   return (
     <>
       <h1>Counter</h1>
