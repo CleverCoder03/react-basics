@@ -6,7 +6,7 @@ export default async function Home() {
     <>
       <main className="w-screen">
         <h1>Hello World</h1>
-        {JSON.stringify(data)}
+        {JSON.stringify(data, null, 2)}
       </main>
     </>
   );
